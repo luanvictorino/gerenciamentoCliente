@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/05/12 21:21:47.000.274,=C:\Users\Pichau\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/05/12 21:24:41.000.173,C:\Users\Pichau\Desktop\GerenciamentoClientes\code\uPrincipal.pas=C:\Users\Pichau\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/05/12 21:24:41.000.173,C:\Users\Pichau\Desktop\GerenciamentoClientes\code\uPrincipal.dfm=C:\Users\Pichau\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2021/05/12 21:25:02.000.200,C:\Users\Pichau\Desktop\GerenciamentoClientes\GerenciamentoClientes.dproj=C:\Users\Pichau\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>2021/05/12 21:44:58.000.667,=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/12 21:46:31.000.471,C:\Users\Pichau\Desktop\GerenciamentoClientes\code\uDMCliente.pas=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/12 21:46:31.000.471,C:\Users\Pichau\Desktop\GerenciamentoClientes\code\uDMCliente.dfm=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.dfm</Transaction>
+    <Transaction>2021/05/12 22:21:47.000.948,=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/12 22:22:00.000.779,C:\Users\Pichau\Desktop\GerenciamentoClientes\uCliente.pas=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/12 22:22:00.000.779,C:\Users\Pichau\Desktop\GerenciamentoClientes\uCliente.dfm=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.dfm</Transaction>
+    <Transaction>2021/05/13 11:29:39.000.700,C:\Users\Pichau\Desktop\GerenciamentoClientes\uCliente.pas=</Transaction>
+    <Transaction>2021/05/13 11:31:18.000.886,=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/13 11:31:32.000.516,=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/13 11:32:47.000.185,=C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas</Transaction>
+    <Transaction>2021/05/13 11:32:57.000.176,C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.pas=C:\Users\Pichau\Desktop\GerenciamentoClientes\code\uCliente.pas</Transaction>
+    <Transaction>2021/05/13 11:32:57.000.176,C:\Users\Pichau\Desktop\GerenciamentoClientes\Unit1.dfm=C:\Users\Pichau\Desktop\GerenciamentoClientes\code\uCliente.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

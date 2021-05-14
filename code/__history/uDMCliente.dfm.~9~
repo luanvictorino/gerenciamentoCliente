@@ -1,0 +1,312 @@
+object dmCliente: TdmCliente
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 298
+  Width = 328
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'Database=gerenciamentoclientes'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 16
+  end
+  object DriverMySql: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Users\Pichau\Desktop\GerenciamentoClientes\lib\libmysql.dll'
+    Left = 152
+    Top = 16
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 256
+    Top = 16
+  end
+  object sqlCliente: TFDTable
+    Connection = Conexao
+    UpdateOptions.UpdateTableName = 'gerenciamentoclientes.cliente'
+    TableName = 'gerenciamentoclientes.cliente'
+    Left = 40
+    Top = 80
+    object sqlClienteCliID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'CliID'
+      Origin = 'CliID'
+      Required = True
+    end
+    object sqlClienteCliNome: TStringField
+      FieldName = 'CliNome'
+      Origin = 'CliNome'
+      Required = True
+      Size = 100
+    end
+    object sqlClienteCliEndereco: TStringField
+      FieldName = 'CliEndereco'
+      Origin = 'CliEndereco'
+      Required = True
+      Size = 100
+    end
+    object sqlClienteCliBairro: TStringField
+      FieldName = 'CliBairro'
+      Origin = 'CliBairro'
+      Required = True
+      Size = 60
+    end
+    object sqlClienteCliCidade: TStringField
+      FieldName = 'CliCidade'
+      Origin = 'CliCidade'
+      Required = True
+      Size = 60
+    end
+    object sqlClienteCliUf: TStringField
+      FieldName = 'CliUf'
+      Origin = 'CliUf'
+      Required = True
+      Size = 2
+    end
+    object sqlClienteCliCep: TStringField
+      FieldName = 'CliCep'
+      Origin = 'CliCep'
+      Required = True
+      EditMask = '00000\-999;0;_'
+    end
+    object sqlClienteCliRg: TStringField
+      FieldName = 'CliRg'
+      Origin = 'CliRg'
+      Required = True
+      Size = 15
+    end
+    object sqlClienteCliCpf: TStringField
+      FieldName = 'CliCpf'
+      Origin = 'CliCpf'
+      Required = True
+      EditMask = '000\.000\.000\-00;0;_'
+      Size = 15
+    end
+    object sqlClienteCliTel: TStringField
+      FieldName = 'CliTel'
+      Origin = 'CliTel'
+      Required = True
+      EditMask = '!\(99\)0000-0000;0;_'
+    end
+    object sqlClienteCliCel: TStringField
+      FieldName = 'CliCel'
+      Origin = 'CliCel'
+      Required = True
+      EditMask = '!\(99\)00000-0000;0;_'
+    end
+    object sqlClienteCliDataNasc: TDateField
+      FieldName = 'CliDataNasc'
+      Origin = 'CliDataNasc'
+      Required = True
+      EditMask = '!99/99/0000;1;_'
+    end
+    object sqlClienteCliDataCad: TDateField
+      FieldName = 'CliDataCad'
+      Origin = 'CliDataCad'
+      Required = True
+    end
+    object sqlClienteCliStatus: TStringField
+      FieldName = 'CliStatus'
+      Origin = 'CliStatus'
+      Required = True
+    end
+    object sqlClienteCliEmail: TStringField
+      FieldName = 'CliEmail'
+      Origin = 'CliEmail'
+      Required = True
+      Size = 100
+    end
+  end
+  object dsCliente: TDataSource
+    DataSet = sqlCliente
+    Left = 152
+    Top = 80
+  end
+  object sqlConsultaCliente: TFDQuery
+    Connection = Conexao
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 40
+    Top = 152
+    object sqlConsultaClienteCliID: TIntegerField
+      FieldName = 'CliID'
+      Origin = 'CliID'
+      Required = True
+    end
+    object sqlConsultaClienteCliNome: TStringField
+      FieldName = 'CliNome'
+      Origin = 'CliNome'
+      Required = True
+      Size = 100
+    end
+    object sqlConsultaClienteCliEndereco: TStringField
+      FieldName = 'CliEndereco'
+      Origin = 'CliEndereco'
+      Required = True
+      Size = 100
+    end
+    object sqlConsultaClienteCliBairro: TStringField
+      FieldName = 'CliBairro'
+      Origin = 'CliBairro'
+      Required = True
+      Size = 60
+    end
+    object sqlConsultaClienteCliCidade: TStringField
+      FieldName = 'CliCidade'
+      Origin = 'CliCidade'
+      Required = True
+      Size = 60
+    end
+    object sqlConsultaClienteCliUf: TStringField
+      FieldName = 'CliUf'
+      Origin = 'CliUf'
+      Required = True
+      Size = 2
+    end
+    object sqlConsultaClienteCliCep: TStringField
+      FieldName = 'CliCep'
+      Origin = 'CliCep'
+      Required = True
+    end
+    object sqlConsultaClienteCliRg: TStringField
+      FieldName = 'CliRg'
+      Origin = 'CliRg'
+      Required = True
+      Size = 15
+    end
+    object sqlConsultaClienteCliCpf: TStringField
+      FieldName = 'CliCpf'
+      Origin = 'CliCpf'
+      Required = True
+      Size = 15
+    end
+    object sqlConsultaClienteCliTel: TStringField
+      FieldName = 'CliTel'
+      Origin = 'CliTel'
+      Required = True
+    end
+    object sqlConsultaClienteCliCel: TStringField
+      FieldName = 'CliCel'
+      Origin = 'CliCel'
+      Required = True
+    end
+    object sqlConsultaClienteCliEmail: TStringField
+      FieldName = 'CliEmail'
+      Origin = 'CliEmail'
+      Required = True
+      Size = 100
+    end
+    object sqlConsultaClienteCliDataNasc: TDateField
+      FieldName = 'CliDataNasc'
+      Origin = 'CliDataNasc'
+      Required = True
+    end
+    object sqlConsultaClienteCliDataCad: TDateField
+      FieldName = 'CliDataCad'
+      Origin = 'CliDataCad'
+      Required = True
+    end
+    object sqlConsultaClienteCliStatus: TStringField
+      FieldName = 'CliStatus'
+      Origin = 'CliStatus'
+      Required = True
+    end
+  end
+  object dsConsultaCliente: TDataSource
+    DataSet = sqlConsultaCliente
+    Left = 152
+    Top = 152
+  end
+  object sqlRelatorioCliente: TFDQuery
+    Connection = Conexao
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 40
+    Top = 224
+    object sqlRelatorioClienteCliID: TIntegerField
+      FieldName = 'CliID'
+      Origin = 'CliID'
+      Required = True
+    end
+    object sqlRelatorioClienteCliNome: TStringField
+      FieldName = 'CliNome'
+      Origin = 'CliNome'
+      Required = True
+      Size = 100
+    end
+    object sqlRelatorioClienteCliEndereco: TStringField
+      FieldName = 'CliEndereco'
+      Origin = 'CliEndereco'
+      Required = True
+      Size = 100
+    end
+    object sqlRelatorioClienteCliBairro: TStringField
+      FieldName = 'CliBairro'
+      Origin = 'CliBairro'
+      Required = True
+      Size = 60
+    end
+    object sqlRelatorioClienteCliCidade: TStringField
+      FieldName = 'CliCidade'
+      Origin = 'CliCidade'
+      Required = True
+      Size = 60
+    end
+    object sqlRelatorioClienteCliUf: TStringField
+      FieldName = 'CliUf'
+      Origin = 'CliUf'
+      Required = True
+      Size = 2
+    end
+    object sqlRelatorioClienteCliCep: TStringField
+      FieldName = 'CliCep'
+      Origin = 'CliCep'
+      Required = True
+    end
+    object sqlRelatorioClienteCliRg: TStringField
+      FieldName = 'CliRg'
+      Origin = 'CliRg'
+      Required = True
+      Size = 15
+    end
+    object sqlRelatorioClienteCliCpf: TStringField
+      FieldName = 'CliCpf'
+      Origin = 'CliCpf'
+      Required = True
+      Size = 15
+    end
+    object sqlRelatorioClienteCliTel: TStringField
+      FieldName = 'CliTel'
+      Origin = 'CliTel'
+      Required = True
+    end
+    object sqlRelatorioClienteCliCel: TStringField
+      FieldName = 'CliCel'
+      Origin = 'CliCel'
+      Required = True
+    end
+    object sqlRelatorioClienteCliEmail: TStringField
+      FieldName = 'CliEmail'
+      Origin = 'CliEmail'
+      Required = True
+      Size = 100
+    end
+    object sqlRelatorioClienteCliDataNasc: TDateField
+      FieldName = 'CliDataNasc'
+      Origin = 'CliDataNasc'
+      Required = True
+    end
+    object sqlRelatorioClienteCliDataCad: TDateField
+      FieldName = 'CliDataCad'
+      Origin = 'CliDataCad'
+      Required = True
+    end
+    object sqlRelatorioClienteCliStatus: TStringField
+      FieldName = 'CliStatus'
+      Origin = 'CliStatus'
+      Required = True
+    end
+  end
+end

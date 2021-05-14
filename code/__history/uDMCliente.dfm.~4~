@@ -1,0 +1,116 @@
+object dmCliente: TdmCliente
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 157
+  Width = 328
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'Database=gerenciamentoclientes'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 16
+  end
+  object DriverMySql: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Users\Pichau\Desktop\GerenciamentoClientes\lib\libmysql.dll'
+    Left = 120
+    Top = 16
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 216
+    Top = 16
+  end
+  object sqlCliente: TFDTable
+    Connection = Conexao
+    UpdateOptions.UpdateTableName = 'gerenciamentoclientes.cliente'
+    TableName = 'gerenciamentoclientes.cliente'
+    Left = 40
+    Top = 80
+    object sqlClienteCliID: TIntegerField
+      FieldName = 'CliID'
+      Origin = 'CliID'
+      Required = True
+    end
+    object sqlClienteCliNome: TStringField
+      FieldName = 'CliNome'
+      Origin = 'CliNome'
+      Required = True
+      Size = 100
+    end
+    object sqlClienteCliEndereco: TStringField
+      FieldName = 'CliEndereco'
+      Origin = 'CliEndereco'
+      Required = True
+      Size = 100
+    end
+    object sqlClienteCliBairro: TStringField
+      FieldName = 'CliBairro'
+      Origin = 'CliBairro'
+      Required = True
+      Size = 60
+    end
+    object sqlClienteCliCidade: TStringField
+      FieldName = 'CliCidade'
+      Origin = 'CliCidade'
+      Required = True
+      Size = 60
+    end
+    object sqlClienteCliUf: TStringField
+      FieldName = 'CliUf'
+      Origin = 'CliUf'
+      Required = True
+      Size = 2
+    end
+    object sqlClienteCliRg: TStringField
+      FieldName = 'CliRg'
+      Origin = 'CliRg'
+      Required = True
+      Size = 15
+    end
+    object sqlClienteCliCpf: TStringField
+      FieldName = 'CliCpf'
+      Origin = 'CliCpf'
+      Required = True
+      Size = 15
+    end
+    object sqlClienteCliTel: TStringField
+      FieldName = 'CliTel'
+      Origin = 'CliTel'
+      Required = True
+    end
+    object sqlClienteCliCel: TStringField
+      FieldName = 'CliCel'
+      Origin = 'CliCel'
+      Required = True
+    end
+    object sqlClienteCliEmail: TStringField
+      FieldName = 'CliEmail'
+      Origin = 'CliEmail'
+      Required = True
+      Size = 100
+    end
+    object sqlClienteCliDataNasc: TDateField
+      FieldName = 'CliDataNasc'
+      Origin = 'CliDataNasc'
+      Required = True
+    end
+    object sqlClienteCliDataCad: TDateField
+      FieldName = 'CliDataCad'
+      Origin = 'CliDataCad'
+      Required = True
+    end
+    object sqlClienteCliStatus: TStringField
+      FieldName = 'CliStatus'
+      Origin = 'CliStatus'
+      Required = True
+    end
+  end
+  object dsCliente: TDataSource
+    DataSet = sqlCliente
+    Left = 120
+    Top = 80
+  end
+end
